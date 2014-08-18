@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fuR-Ha-qYo">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="AvE-gV-Ofe">
+            <objects>
+                <viewController id="fuR-Ha-qYo" customClass="ViewController" customModule="MapKitCoreLocationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WhE-uP-6Mo"/>
+                        <viewControllerLayoutGuide type="bottom" id="buk-ZH-ZK0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="29y-HY-ffs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LWF-4n-ggE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="455"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="XMH-uZ-oe2"/>
+                                    <constraint firstAttribute="height" constant="455" id="jYj-Id-eGF"/>
+                                </constraints>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AzA-r2-II0">
+                                <rect key="frame" x="201" y="485" width="199" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7yb-gU-xhd"/>
+                                    <constraint firstAttribute="width" constant="199" id="LpV-LK-9Ze"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eve-eM-uOd">
+                                <rect key="frame" x="451" y="536" width="47" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zxu-DC-rV0"/>
+                                    <constraint firstAttribute="width" constant="47" id="nYj-N1-aqM"/>
+                                </constraints>
+                                <state key="normal" title="Locate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="locateBtnPressed:" destination="fuR-Ha-qYo" eventType="touchUpInside" id="oZ1-26-gIW"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xIc-1O-KX5">
+                                <rect key="frame" x="201" y="536" width="199" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="Ke6-3Q-S6X"/>
+                                    <constraint firstAttribute="height" constant="30" id="asd-rY-wfj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xIc-1O-KX5" firstAttribute="top" secondItem="AzA-r2-II0" secondAttribute="bottom" constant="21" id="9bm-iF-OGK"/>
+                            <constraint firstItem="Eve-eM-uOd" firstAttribute="leading" secondItem="xIc-1O-KX5" secondAttribute="trailing" constant="51" id="BSQ-I6-0gb"/>
+                            <constraint firstItem="buk-ZH-ZK0" firstAttribute="top" secondItem="Eve-eM-uOd" secondAttribute="bottom" constant="34" id="KtE-C5-Cra"/>
+                            <constraint firstAttribute="centerX" secondItem="xIc-1O-KX5" secondAttribute="centerX" id="NZY-EU-vN1"/>
+                            <constraint firstItem="buk-ZH-ZK0" firstAttribute="top" secondItem="xIc-1O-KX5" secondAttribute="bottom" constant="34" id="Ye6-g5-17K"/>
+                            <constraint firstAttribute="centerX" secondItem="AzA-r2-II0" secondAttribute="centerX" id="hrW-Oc-rya"/>
+                            <constraint firstItem="buk-ZH-ZK0" firstAttribute="top" secondItem="LWF-4n-ggE" secondAttribute="bottom" constant="145" id="jwr-q2-nh8"/>
+                            <constraint firstItem="AzA-r2-II0" firstAttribute="top" secondItem="LWF-4n-ggE" secondAttribute="bottom" constant="30" id="rOo-GS-8at"/>
+                            <constraint firstAttribute="centerX" secondItem="LWF-4n-ggE" secondAttribute="centerX" id="vlk-iX-ezV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="latField" destination="AzA-r2-II0" id="cKP-92-pll"/>
+                        <outlet property="longFiled" destination="xIc-1O-KX5" id="dPN-dJ-hWC"/>
+                        <outlet property="mapView" destination="LWF-4n-ggE" id="CNB-gZ-Z3s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pK8-Oz-Jy3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163" y="11"/>
+        </scene>
+    </scenes>
+</document>
